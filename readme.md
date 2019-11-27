@@ -26,6 +26,6 @@ Views:
 </br>
 3- Change Database Name, User Name,Password for your DB inside .env file
 </br>
-4- Run Composter Install.
+4- Run Composer Install.
 </br>
 5- Enjoy the Pizza Ordering System :).
