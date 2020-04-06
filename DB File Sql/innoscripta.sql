@@ -715,6 +715,24 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ad
 (2, 'Mohamed', 'm.said.bdr@gmail.com', NULL, '$2y$10$3Ccxg17LYw/.qS7ib5Xcr.T5po6AXUsnjEcEI4IHcQ0MGkcuRfO.O', NULL, 'za7FtmzYvfzBYmkQtE5tfvStl7dY3Z6uZKSpuRtBRIvlbXzM0csZEQYzjuEb', '2019-11-15 20:18:01', '2019-11-15 20:18:01', NULL, NULL, NULL, NULL, NULL, NULL);
 COMMIT;
 
+DROP TABLE IF EXISTS `order_details`;
+CREATE TABLE IF NOT EXISTS `order_details` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `user_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `users_email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `item_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item_code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item_size` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item_price` double(8,2) NOT NULL,
+  `item_quantity` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
