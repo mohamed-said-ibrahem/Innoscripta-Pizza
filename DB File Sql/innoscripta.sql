@@ -721,7 +721,7 @@ CREATE TABLE IF NOT EXISTS `order_details` (
   `order_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `user_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `users_email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `item_id` int(11) NOT NULL,
   `item_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `item_code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
